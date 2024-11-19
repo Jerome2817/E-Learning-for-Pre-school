@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning App</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Kinders Learning</h1>
+    </header>
+
+    <section class="grid-container">
+        <div class="grid-item" style="background-image: url('images/shapes_colors.png');">
+            <button onclick="redirectTo('shapes_colors.html')" class="bounce-button">Shapes</button>
+        </div>
+        <div class="grid-item" style="background-image: url('images/counting.png');">
+            <button onclick="redirectTo('counting.html')" class="bounce-button">Numbers</button>
+        </div>
+        <div class="grid-item" style="background-image: url('images/spelling.png');">
+            <button onclick="redirectTo('spelling.html')" class="bounce-button">Missing Letters</button>
+        </div>
+        <div class="grid-item" style="background-image: url('images/add_subtract.png');">
+            <button onclick="redirectTo('add_subtract.html')" class="bounce-button">Animals</button>
+        </div>
+        <div class="grid-item" style="background-image: url('images/letters.png');">
+            <button onclick="redirectTo('letters.html')" class="bounce-button">Alphabet</button>
+        </div>
+        <div class="grid-item" style="background-image: url('images/letters.png');">
+            <button onclick="redirectTo('letters.html')" class="bounce-button">Subtraction</button>
+        </div>
+        <div class="grid-item" style="background-image: url('images/letters.png');">
+            <button onclick="redirectTo('letters.html')" class="bounce-button">Addition</button>
+        </div>
+        <div class="grid-item" style="background-image: url('images/letters.png');">
+            <button onclick="redirectTo('letters.html')" class="bounce-button">Sounds</button>
+        </div>
+        <div class="grid-item" style="background-image: url('images/more_games.png');">
+            <button onclick="redirectTo('more_games.html')" class="bounce-button">Colors</button>
+        </div>
+    </section>
+
+    <script>
+        function redirectTo(page) {
+            const clickSound = new Audio('click-sound.mp3'); // Ensure you have a click sound file
+            clickSound.play();
+            setTimeout(() => {
+                window.location.href = page;
+            }, 300); // Adjust delay if needed
+        }
+    </script>
+</body>
+</html>

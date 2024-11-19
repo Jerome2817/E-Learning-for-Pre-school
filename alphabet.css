@@ -1,0 +1,146 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url('image2.jpg') no-repeat center center fixed; /* Add your image path */
+    background-size: cover; /* Ensures the image covers the entire body */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    text-align: center;
+    background-color: rgb(255, 253, 253); /* Slightly more opaque for better visibility */
+    padding: 30px 60px; /* Increased padding for a larger container */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3); /* Larger shadow for depth */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px; /* Increased margin below the heading */
+    font-size: 36px; /* Larger font size for the heading */
+}
+
+.alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 80px); /* Increased from 60px to 80px per column */
+    grid-gap: 20px; /* Increased gap between letters */
+    justify-content: center;
+    margin-bottom: 25px; /* Increased margin below the grid */
+}
+
+.letter-box {
+    width: 80px; /* Increased width from 60px to 80px */
+    height: 80px; /* Increased height from 60px to 80px */
+    background-color: #fff;
+    border: 4px solid #ff6f61; /* Thicker border for emphasis */
+    border-radius: 15px; /* More rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px; /* Increased font size from 32px to 40px */
+    color: #ff6f61;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.letter-box:hover {
+    transform: scale(1.15); /* Increased scaling on hover for a more pronounced effect */
+    background-color: #ffe5d9; /* Subtle background color change on hover */
+}
+
+#display-area {
+    font-size: 28px; /* Increased font size for better readability */
+    color: #333;
+    min-height: 40px; /* Increased minimum height to accommodate larger text */
+}
+
+/* Responsive Design Enhancements */
+
+@media (max-width: 1200px) {
+    .alphabet-grid {
+        grid-template-columns: repeat(5, 70px); /* Adjust columns for slightly smaller screens */
+        grid-gap: 15px;
+    }
+
+    .letter-box {
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .alphabet-grid {
+        grid-template-columns: repeat(4, 60px); /* Adjust columns for medium screens */
+        grid-gap: 10px;
+    }
+
+    .letter-box {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 20px 30px; /* Reduced padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #display-area {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .alphabet-grid {
+        grid-template-columns: repeat(3, 50px); /* Adjust columns for small screens */
+        grid-gap: 8px;
+    }
+
+    .letter-box {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 15px 20px; /* Further reduced padding for very small screens */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #display-area {
+        font-size: 20px;
+    }
+
+    /* Add this to your styles.css */
+    #back-button {
+        margin-top: 50px; /* Increased space above the button */
+        padding: 25px 50px; /* Increased padding for a significantly larger button */
+        font-size: 32px; /* Much larger font size */
+        color: white; /* Text color */
+        background-color: #ff6f61; /* Button color */
+        border: none; /* No border */
+        border-radius: 20px; /* More rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s; /* Smooth transition for hover */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    }
+    
+    #back-button:hover {
+        background-color: #ff4f41; /* Darker shade on hover */
+        transform: scale(1.05); /* Slightly grow on hover for effect */
+    }
+}

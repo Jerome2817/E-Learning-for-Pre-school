@@ -1,0 +1,170 @@
+/* styles.css */
+
+body {
+    font-family: 'Comic Sans MS', sans-serif; /* Fun and kid-friendly font */
+    background-color: #f0f8ff; /* Soft sky blue background */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffcc66; /* Warm and cheerful yellow */
+    color: #ff6347; /* Bright and playful red-orange */
+    padding: 1.5rem;
+    font-size: 2.5rem; /* Larger, more engaging text */
+    font-weight: bold;
+    border-bottom: 5px solid #ffa500; /* Fun accent border */
+    text-shadow: 2px 2px #fff; /* Gentle text shadow for a 3D effect */
+    animation: slideIn 1s ease-in-out; /* Slide-in animation */
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateY(-100%); 
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+    animation: gridFadeIn 1.5s ease-in-out;
+}
+
+@keyframes gridFadeIn {
+    from { 
+        opacity: 0; 
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+.grid-item {
+    position: relative;
+    height: 200px;
+    background-color: #fff8dc; /* Soft light beige */
+    border-radius: 20px; /* Softer, more playful rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition for hover */
+    animation: bounceIn 1s ease-in-out; /* Fun bounce-in effect */
+}
+
+.grid-item:hover {
+    transform: scale(1.1); /* More pronounced hover scale */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Slightly deeper shadow on hover */
+}
+
+.grid-item button {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffefd5; /* Lighter and fun button background */
+    color: #ff4500; /* Bold orange text for buttons */
+    border: 2px solid #ff4500;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for effects */
+}
+
+.grid-item button:hover {
+    background-color: #ffdab9; /* Softer peach color on hover */
+}
+
+.bounce-button:active {
+    transform: scale(0.85); /* More playful and bouncy effect on click */
+    transition: transform 0.2s;
+}
+
+/* Additional playful animations */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        padding: 20px;
+    }
+    .grid-item {
+        height: 150px; /* Reduce grid item height for smaller screens */
+    }
+    .grid-item button {
+        font-size: 16px; /* Adjust button size for smaller screens */
+    }
+}
+
+/* Message pop-up */
+.message-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffeb3b;
+    color: #333;
+    font-size: 1.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Bounce animation for grid items */
+.bounce {
+    animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
